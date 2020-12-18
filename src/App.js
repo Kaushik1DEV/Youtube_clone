@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Grid } from "@material-ui/core";
 
 import { SearchBar, VideoList, VideoDetail } from "./components";
@@ -8,6 +8,10 @@ import youtube from "./api/youtube";
 export default () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  useEffect(() => {
+   handleSubmit("reactjs");  
+  });
+ 
 
   return (
     <Grid style={{ justifyContent: "center" }} container spacing={10}>
